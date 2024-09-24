@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript/layout.js"></script>
+</head>
+<body>
+    <form action="" id="userinfo">
+        <div id="title">會員資料</div>
+        <label>
+            姓名
+            <input type="text">
+        </label>
+        <label>
+            性別
+            <select name="gender" id="choosegender">
+                <option value="default" disabled>請選擇性別</option>
+                <option value="male">男</option>
+                <option value="female">女</option>
+                <option value="x">不願透露</option>
+            </select>
+        </label>
+        <label>
+            生日
+            <input type="date">
+        </label>
+        <label>
+            電子郵件
+            <input type="email">
+        </label>
+        <label>
+            連絡電話
+            <input type="tel">
+        </label>
+        <label>
+            通訊地址
+            <input type="text">
+        </label>
+        <label>
+            教育程度
+            <select name="educated" id="educated">
+                <option value="default">請選擇教育程度</option>
+                <option value="elementary">國小</option>
+                <option value="junior">國中</option>
+                <option value="senior">高中</option>
+                <option value="university">大學</option>
+            </select>
+        </label>
+        <div>
+            <input type="reset" value="重置">
+            <input type="submit" value="送出">
+        </div>
+    </form>
+</body>
+</html>

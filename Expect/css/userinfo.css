@@ -1,0 +1,35 @@
+#userinfo {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#title {
+    font-size: 24px;
+}
+
+label {
+    width: 50%;
+    text-align: center;
+}
+
+label > * {
+    width: 60%;
+    float: right;
+}
+
+label ,label *{
+    font-size: 20px;
+}
+
+input ,select {
+    background-color: #f4eee2;
+    border: none;
+}
+
+input:focus , select:focus {
+    border: none;
+}

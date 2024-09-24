@@ -1,0 +1,40 @@
+#answers {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#ans {
+    background-color: #f4eee2;
+    width: 30%;
+    height: 35%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#ans img {
+    width: 20%;
+    aspect-ratio: 3/4;
+}
+
+#options {
+    width: 40%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#opt {
+    background-color: #e9873e;
+    width: 22%;
+    height: 35%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

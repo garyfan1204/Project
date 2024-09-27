@@ -3,6 +3,7 @@ const pages = {
     "/userinfo.html": "userinfo.html",
     "/dummie.html": "dummie.html",
     "/test.html": "test.html",
+    "/test-history.html": "test-history.html",
     "/result.html": "result.html"
 }
 
@@ -11,6 +12,7 @@ const titles = {
     "userinfo.html": "用戶資料",
     "dummie.html": "資訊懶人包",
     "test.html": "職涯測驗",
+    "test-history.html": "歷史紀錄",
     "result.html": "測驗結果"
 }
 
@@ -19,6 +21,7 @@ const cssFiles = {
     "userinfo.html": ["css/layout.css", "css/userinfo.css"],
     "dummie.html": ["css/layout.css", "css/dummie.css"],
     "test.html": ["css/layout.css", "css/test.css"],
+    "test-history.html": ["css/layout.css", "css/test-history.css"],
     "result.html": ["css/layout.css", "css/result.css"]
 }
 

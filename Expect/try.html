@@ -3,128 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>拖曳恢復原本內容</title>
+    <title>Dialog 示例</title>
     <style>
-        .draggable {
-            width: 100px;
-            height: 100px;
-            background-color: #3498db;
-            color: white;
-            text-align: center;
-            line-height: 100px;
-            cursor: move;
-            margin: 10px;
-            display: inline-block;
-        }
-
-        .dropzone {
-            width: 150px;
-            height: 150px;
-            border: 2px dashed #2ecc71;
-            text-align: center;
-            line-height: 150px;
-            margin: 10px;
-            display: inline-block;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
+      dialog{
+  border: none;
+  box-shadow: 0 2px 6px #ccc;
+  border-radius: 10px;
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.1);
+}
     </style>
 </head>
 <body>
+  <button id="show">show</button>
+<dialog id="infoModal">
+  <p>這是 html 的 dialog!!</p>
+</dialog>
 
-    <h2>可拖曳物件</h2>
-    <div class="draggable" id="draggable1" draggable="true">物件 1</div>
-    <div class="draggable" id="draggable2" draggable="true">物件 2</div>
-    <div class="draggable" id="draggable3" draggable="true">物件 3</div>
-    <div class="draggable" id="draggable4" draggable="true">物件 4</div>
-    <div class="draggable" id="draggable5" draggable="true">物件 5</div>
-    <div class="draggable" id="draggable6" draggable="true">物件 6</div>
-    <div class="draggable" id="draggable7" draggable="true">物件 7</div>
-    <div class="draggable" id="draggable8" draggable="true">物件 8</div>
 
-    <h2>放置容器</h2>
-    <div class="container">
-        <div class="dropzone" id="dropzone1">容器 1</div>
-        <div class="dropzone" id="dropzone2">容器 2</div>
-        <div class="dropzone" id="dropzone3">容器 3</div>
-    </div>
-    <div class="container">
-        <div class="dropzone" id="dropzone4">容器 4</div>
-        <div class="dropzone" id="dropzone5">容器 5</div>
-        <div class="dropzone" id="dropzone6">容器 6</div>
-    </div>
-
-    <script>
-        // 獲取所有可拖曳物件和放置容器
-        const draggables = document.querySelectorAll('.draggable');
-        const dropzones = document.querySelectorAll('.dropzone');
-
-        // 用來儲存每個容器的原始內容
-        const originalContents = {};
-
-        // 設定每個可拖曳物件的拖曳事件
-        draggables.forEach(draggable => {
-            // 記錄原始位置
-            const originalPosition = {
-                left: draggable.style.left,
-                top: draggable.style.top
-            };
-
-            // 拖曳開始事件
-            draggable.addEventListener('dragstart', (event) => {
-                event.dataTransfer.setData('text/plain', event.target.id);
-                event.target.style.opacity = '0.5';
-            });
-
-            // 拖曳結束事件
-            draggable.addEventListener('dragend', (event) => {
-                event.target.style.opacity = '1';
-            });
-
-            // 點擊事件，返回原位並恢復容器原始內容
-            draggable.addEventListener('click', () => {
-                // 恢復原來的容器內容
-                if (draggable.parentElement.classList.contains('dropzone')) {
-                    const currentDropzoneId = draggable.parentElement.id;
-                    draggable.parentElement.innerHTML = originalContents[currentDropzoneId];
-                }
-                // 返回原本位置
-                draggable.style.left = originalPosition.left;
-                draggable.style.top = originalPosition.top;
-                document.body.appendChild(draggable); // 將物件放回到 body
-            });
-        });
-
-        // 設定每個容器的拖曳放置事件
-        dropzones.forEach(dropzone => {
-            // 允許拖曳物件進入容器
-            dropzone.addEventListener('dragover', (event) => {
-                event.preventDefault();  // 必須阻止預設行為以允許放置
-            });
-
-            // 放置事件
-            dropzone.addEventListener('drop', (event) => {
-                event.preventDefault();
-                const data = event.dataTransfer.getData('text/plain');
-                const draggedElement = document.getElementById(data);
-                const dropzoneId = dropzone.id;
-
-                // 儲存容器的原始內容
-                if (!(dropzoneId in originalContents)) {
-                    originalContents[dropzoneId] = dropzone.innerHTML;
-                }
-
-                // 清空容器內容並放入拖曳物件
-                dropzone.innerHTML = '';
-                dropzone.appendChild(draggedElement);
-                draggedElement.style.position = 'static';  // 重設位置為預設狀態
-            });
-        });
-    </script>
+<script>
+  let btn=document.querySelector("#show");
+let infoModal=document.querySelector("#infoModal");
+btn.addEventListener("click", function(){
+  infoModal.showModal();
+})
+</script>
 
 </body>
 </html>

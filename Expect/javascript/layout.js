@@ -24,7 +24,7 @@ const cssFiles = {
 
 const jsFiles = {
     "index.html": ["javascript/carousel.js"],
-    "test.html":  ["javascript/test.js"]
+    "test.html":  ["javascript/dropable.js"]
 }
 
 function layout(page) {
@@ -41,6 +41,7 @@ function layout(page) {
         const title = titles[page];
         const cssFile = cssFiles[page];
         const jsFile = jsFiles[page];
+        login();
 
         if (title) {
             document.title = title;
@@ -74,3 +75,33 @@ window.addEventListener("DOMContentLoaded", function () {
     let page = pages[pathname] || "index.html";
     layout(page);
 });
+
+function login() {
+    var login = document.querySelectorAll("#login");
+    var registerpage = document.getElementById("register");
+    var closebtn = document.querySelectorAll("#close");
+    var loginpage = document.getElementById("loginpage");
+    var registerpage = document.getElementById("registerpage");
+
+    login.forEach(function(link){
+        link.addEventListener("click", function(event){
+            event.preventDefault();
+            loginpage.style.display = "flex";
+            registerpage.style.display = "none";
+        });
+    })
+
+    register.addEventListener("click", function(event) {
+        event.preventDefault();
+        loginpage.style.display = "none";
+        registerpage.style.display = "flex";
+    });
+
+    closebtn.forEach(function(btn) {
+        btn.addEventListener("click", function(event) {
+            event.preventDefault();
+            loginpage.style.display = "none";
+            registerpage.style.display = "none";
+        });
+    });
+};

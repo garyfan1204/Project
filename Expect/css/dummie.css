@@ -18,7 +18,7 @@
     border-radius: 10px;
 }
 
-#salary {
+#salary ,#requirement {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,6 +27,7 @@
 
 #title {
     font-size: 26px;
+    font-weight: bold;
 }
 
 #content {
@@ -35,6 +36,54 @@
     display: flex;
 }
 
-#content div {
+#requirement #content{
+    flex-direction: column;
+}
+
+#salary-left ,#salary-right {
     width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+.seniority {
+    color: #745329;
+    font-size: 20px;
+    text-align: right;
+}
+
+.salary {
+    font-size: 18px;
+    color: #cd9853;
+}
+
+#skill ,#licence{
+    height: 50%;
+    p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+#links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#links a div{
+    background-color: #ffb144;
+    color: #fff;
+    font-weight: bold;
+    width: 50px;
+    aspect-ratio: 2/1;
+    margin: 5px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

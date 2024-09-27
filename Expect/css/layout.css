@@ -228,7 +228,7 @@ select {
 label {
     color: #7b7b7b;
 	position: absolute;
-    left: 25px;
+	left: 1rem;
 	top: 15px;
 	transition: all .2s;
 }

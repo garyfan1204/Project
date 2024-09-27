@@ -181,7 +181,7 @@ dialog::backdrop {
 }
 
 #input {
-    width: 75%;
+    width: 100%;
     height: 75%;
     display: flex;
     flex-direction: column;
@@ -196,38 +196,46 @@ dialog::backdrop {
 }
 
 #name, #gender, #birth, #acc, #phone, #edu, #address, #pwd {
-    width: 100%;
+    width: 80%;
     position: relative;
 }
 
 .columns > * {
-    width: 90%;
     display: flex;
     justify-content: center;
 }
 
 input, select {
     background-color: #fff;
-    width: calc(100% - 32px);
-    height: 18px;
-    padding: 15px;
     border: 1px solid #659dbc;
     border-radius: 10px;
+    padding: 15px;
     &:focus {
         outline: none;
     }
 }
 
+input {
+    width: calc(95% - 32px);
+    height: 18px;
+}
+
+select {
+    width: calc(95% - 2px);
+    height: 48px;
+}
+
 label {
     color: #7b7b7b;
 	position: absolute;
-	left: 1rem;
+    left: 25px;
 	top: 15px;
 	transition: all .2s;
 }
 
 input:focus + label, input:not(:placeholder-shown) + label,
-textarea:focus + label, textarea:not(:placeholder-shown) + label {
+textarea:focus + label, textarea:not(:placeholder-shown) + label,
+select + label {
 	top: -20px;
 	font-size: 13px;
 }

@@ -1,35 +1,33 @@
-#userinfo {
+#infopage {
+    width: 550px;
+    height: 450px;
+}
+
+#info {
+    background-color: #fdefcb;
+    font-size: 28px;
     width: 50%;
-    height: 80%;
+    height: 60px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
-#title {
-    font-size: 24px;
-}
-
-label {
-    width: 50%;
-    text-align: center;
-}
-
-label > * {
-    width: 60%;
-    float: right;
-}
-
-label ,label *{
-    font-size: 20px;
-}
-
-input ,select {
-    background-color: #f4eee2;
+input[type = "submit"], input[type = "reset"] {
+    color: #fff;
+    width: 25%;
+    height: 40px;
     border: none;
+    border-radius: 25px;
+    padding: 0;
 }
 
-input:focus , select:focus {
-    border: none;
+input[type = "reset"] {
+    background-color: #dbc8b6;
+}
+
+input[type = "submit"] {
+    background-color: #d5ad8a;
 }

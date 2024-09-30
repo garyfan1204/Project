@@ -1,0 +1,10 @@
+#wrap {
+    background-color: #f4eee2;
+    width: 75%;
+    height: 85%;
+    border-radius: 10px;
+}
+
+input[type = "search"] {
+
+}

@@ -73,11 +73,10 @@
     flex-wrap: wrap;
 }
 
-#links a div{
+#link{
     background-color: #ffb144;
     color: #fff;
-    width: 50px;
-    aspect-ratio: 2/1;
+    padding: 5px 10px;
     margin: 5px;
     border-radius: 25px;
     display: flex;

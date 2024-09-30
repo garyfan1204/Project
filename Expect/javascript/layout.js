@@ -1,6 +1,6 @@
 const pages = {
     "/index.html": "index.html",
-    "/userinfo.html": "userinfo.html",
+    "/forcast.html": "forcast.html",
     "/dummie.html": "dummie.html",
     "/test.html": "test.html",
     "/test-history.html": "test-history.html",
@@ -9,7 +9,7 @@ const pages = {
 
 const titles = {
     "index.html": "職得期待",
-    "userinfo.html": "用戶資料",
+    "forcast.html": "景氣預測",
     "dummie.html": "資訊懶人包",
     "test.html": "職涯測驗",
     "test-history.html": "歷史紀錄",
@@ -18,7 +18,7 @@ const titles = {
 
 const cssFiles = {
     "index.html": ["css/layout.css", "css/index.css"],
-    "userinfo.html": ["css/layout.css", "css/userinfo.css"],
+    "forcast.html": ["css/layout.css", "css/forcast.css"],
     "dummie.html": ["css/layout.css", "css/dummie.css"],
     "test.html": ["css/layout.css", "css/test.css"],
     "test-history.html": ["css/layout.css", "css/test-history.css"],
@@ -45,6 +45,7 @@ function layout(page) {
         const cssFile = cssFiles[page];
         const jsFile = jsFiles[page];
         login();
+        userinfo();
 
         if (title) {
             document.title = title;
@@ -107,4 +108,14 @@ function login() {
             registerpage.style.display = "none";
         });
     });
-};
+}
+
+function userinfo( ){
+    var userinfo = document.getElementById("userinfo");
+    var infopage = document.getElementById("infopage");
+
+    userinfo.addEventListener("click", function(event) {
+        event.preventDefault();
+        infopage.style.display = "flex";
+    });
+}

@@ -52,3 +52,15 @@
     -webkit-user-select: none;
     -ms-user-select: none;
 }
+
+.ans.filled {
+    background-color: #ffb144;
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dislike.filled {
+    transform: rotate(0);
+}

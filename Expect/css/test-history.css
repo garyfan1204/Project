@@ -23,7 +23,6 @@ h1 {
 }
 
 .sort >*{
-    color: #745329;
     font-size: 18px;
     display: flex;
     justify-content: center;

@@ -32,9 +32,8 @@
 
 .content {
     background-color: #f4eee2;
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
-    padding: 20px;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     position: relative;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
@@ -49,7 +48,6 @@
 }
 
 #type-name {
-    color: #745329;
     font-size: 24px;
     position: absolute;
     left: 50%;
@@ -66,6 +64,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
+    top: 0;
+    left: 0;
     transition: all 0.6s;
 }
 
@@ -89,8 +89,8 @@
 }
 
 #sort p {
-    width: 10%;
-
+    width: 15%;
+    text-align: center;
 }
 
 #intro {

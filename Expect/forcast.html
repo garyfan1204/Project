@@ -7,38 +7,43 @@
 </head>
 <body>
     <div id="wrap">
-        <input type="search" placeholder="搜尋">
         <div id="leftside">
             <div id="date">2024/08</div>
             <div id="type">工業生產指數趨勢圖</div>
             <canvas></canvas>
         </div>
         <div id="rightside">
+            <div id="search">
+                <input type="search" placeholder="搜尋">
+                <a href="" id="searchbtn">
+                    <img src="images/search.png" alt="">
+                </a>
+            </div>
             <div id="content">
-                <div id="columns">
-                    <div class="mark">
+                <div class="column">
+                    <div class="indicators">
                         <a href="">
-                            <div class="icon"></div>
+                            <div class="icon"><img src="images/leading.png" alt=""></div>
                             <div class="name">領先指標</div>
                         </a>
                     </div>
-                    <div class="mark">
+                    <div class="indicators">
                         <a href="">
-                            <div class="icon"></div>
+                            <div class="icon"><img src="images/simultaneous.png" alt=""></div>
                             <div class="name">同時指標</div>
                         </a>
                     </div>
-                    <div class="mark">
+                    <div class="indicators">
                         <a href="">
-                            <div class="icon"></div>
+                            <div class="icon"><img src="images/lagging.png" alt=""></div>
                             <div class="name">落後指標</div>
                         </a>
                     </div>
                 </div>
-                <div id="columns"><a href=""></a></div>
-                <div id="columns"><a href=""></a></div>
-                <div id="columns"><a href=""></a></div>
-                <div id="columns"><a href=""></a></div>
+                <div class="column"><a href="">工業生產指數</a></div>
+                <div class="column"><a href="">製造業營業氣候測驗點</a></div>
+                <div class="column"><a href="">工業及服務業加班工時</a></div>
+                <div class="column"><a href="">半導體產業</a></div>
             </div>
         </div>
     </div>

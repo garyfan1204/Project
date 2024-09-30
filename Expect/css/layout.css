@@ -6,6 +6,7 @@
     padding: 0;
     font-family: 'Arial';
     font-weight: bold;
+    color: #745329;
 }
 
 body {
@@ -105,7 +106,6 @@ header a:not(#logo):hover {
 
 .login {
     background-color: #fff;
-    color: #745329;
     width: 90px;
     height: calc(100% - 20px);
     margin: 10px;
@@ -118,7 +118,6 @@ header a:not(#logo):hover {
 }
 
 .login:active {
-    color: #745329;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
@@ -133,7 +132,6 @@ main {
 }
 
 dialog{
-    color: #745329;
     padding: 50px;
     border: none;
     border-radius: 10px;
@@ -153,7 +151,6 @@ dialog::backdrop {
 }
 
 label {
-    color: #745329;
 	position: absolute;
 	left: 1rem;
 	top: 15px;
